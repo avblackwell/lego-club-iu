@@ -34,7 +34,7 @@ description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit.
 </section> #}
 <section>
   <div class="container flow">
-    <h2>Upcoming Meetings</h2>
+    <h2>Upcoming events</h2>
     {%- for item in collections.featuredEvents -%}
       {% include 'featured-event.njk' %}
     {%- endfor -%}
@@ -42,6 +42,13 @@ description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit.
 </section>
 
 {% include 'how-register.njk' %}
+
+<section class="container flow">
+  <h2>About the organizers</h2>
+  {%- for item in collections.people -%}
+    {% include 'person-no-photo.njk' %}
+  {%- endfor -%}
+</section>
 
 <section class="">
   <div class="container flow">
@@ -54,8 +61,7 @@ description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit.
         <a href="/">
           <img
             src="https://picsum.photos/300/200"
-            alt="Placeholder"
-/>
+            alt="Placeholder"/>
         </a>
       </article>
       <article class="sponsor">
@@ -65,10 +71,4 @@ description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit.
       </article>
     </div>
   </div>
-</section>
-<section class="container flow">
-  <h2>About the organizers</h2>
-  {%- for item in collections.people -%}
-    {% include 'person-no-photo.njk' %}
-  {%- endfor -%}
 </section>
