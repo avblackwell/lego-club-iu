@@ -32,11 +32,13 @@ description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit.
     <p>Stay tuned for details!</p>
   {% endif %}
 </section> #}
-<section class="container flow">
-  <h2>Upcoming Meetings</h2>
-  {%- for item in collections.featuredEvents -%}
-    {% include 'featured-event.njk' %}
-  {%- endfor -%}
+<section>
+  <div class="container flow">
+    <h2>Upcoming Meetings</h2>
+    {%- for item in collections.featuredEvents -%}
+      {% include 'featured-event.njk' %}
+    {%- endfor -%}
+  </div>
 </section>
 
 {% include 'how-register.njk' %}
