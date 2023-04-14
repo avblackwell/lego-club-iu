@@ -1,0 +1,12 @@
+---
+layout: layouts/layout.njk
+title: LEGO Club @ IU Events
+description: Occaecat minim ut ea nisi cillum cillum amet in ad.
+---
+
+<section class="container flow">
+  <h1>Events</h1>
+  {%- for item in collections.featuredEvents -%}
+    {% include 'event-short.njk' %}
+  {%- endfor -%}
+</section>

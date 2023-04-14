@@ -1,0 +1,10 @@
+# example netlify.toml
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "_site"
+
+[build.environment]
+  TZ = "America/Chicago"
+[dev]
+  command = "npm run start"

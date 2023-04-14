@@ -1,0 +1,72 @@
+---
+layout: layouts/with-header.njk
+title: LEGO Club @ IU
+descriptionIsHtml: true
+description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit. Commodo ullamco nostrud in amet consectetur culpa adipisicing anim consectetur reprehenderit officia.</p><a class='button' href='/'>Do something</a>"
+---
+
+{# <a
+  href="https://www.11ty.dev/news/logo-homage/"
+  class="elv-possum-anchor"
+  data-investors-avatar=""
+>
+  <picture class="elv-possum-pic">
+    <!-- <source srcset="/img/possum-balloon-original.webp" type="image/webp"> -->
+    <img
+      src="/img/possum-balloon-original-sm.png"
+      class="elv-possum"
+      alt="The possum is Eleventy’s mascot"
+      loading="lazy"
+      width="200"
+      height="363"
+/>
+  </picture>
+</a> #}
+
+{# <section class="container flow">
+  {% set event = collections.eventPages | nextEvent %}
+  <h2 id="next-event">Our next meeting</h2>
+  {% if event %}
+    {% include 'featured-event.njk' %}
+  {% else %}
+    <p>Stay tuned for details!</p>
+  {% endif %}
+</section> #}
+<section class="container flow">
+  <h2>Upcoming Meetings</h2>
+  {%- for item in collections.featuredEvents -%}
+    {% include 'featured-event.njk' %}
+  {%- endfor -%}
+</section>
+
+{% include 'how-register.njk' %}
+
+<section class="">
+  <div class="container flow">
+    <h2>Sponsors</h2>
+    <p>
+      Non elit sit sit commodo consequat eu aliqua cillum.
+    </p>
+    <div class="sponsors">
+      <article class="sponsor">
+        <a href="/">
+          <img
+            src="https://picsum.photos/300/200"
+            alt="Placeholder"
+/>
+        </a>
+      </article>
+      <article class="sponsor">
+        <a href="/">
+          <img src="https://picsum.photos/300/200" alt="Placeholder"/>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="container flow">
+  <h2>About the organizers</h2>
+  {%- for item in collections.people -%}
+    {% include 'person-no-photo.njk' %}
+  {%- endfor -%}
+</section>

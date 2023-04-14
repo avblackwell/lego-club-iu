@@ -1,0 +1,10 @@
+<article class="person-card">
+  <img class="headshot" src="{{item.data.headshotSrc}}" width="150" height="150" alt="">
+  <div class="card-content">
+    <h3>
+      {{item.data.name}}
+      {% if item.data.pronouns %}({{item.data.pronouns}}){% endif %}
+    </h3>
+    <small>{{item.data.bio | safe}}</small>
+  </div>
+</article>
