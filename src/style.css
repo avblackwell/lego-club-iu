@@ -22,7 +22,7 @@
     0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
     0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
     0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));  
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
 
   --red-0: #fff5f5;
   --red-1: #ffe3e3;
@@ -591,17 +591,10 @@ footer svg {
   height: 3.5em;
   width: 100%;
   fill: var(--curve-color, var(--red-12));
+  transform: translateY(-1px);
 }
 
-footer {
-  background-color: var(--red-12);
-  color: var(--red-0);
-}
 
-header {
-  background-color: var(--red-12);
-  color: var(--red-0);
-}
 
 .pagination {
   display: flex;
