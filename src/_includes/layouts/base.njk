@@ -14,7 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    {{ content | safe }}
+    <header class="dark-bg">
+      {% include 'nav.njk' %}
+      <div class="wrapper region flow hero">
+        <h1>{{title}}</h1>
+        <p>{{description | safe}}</p>
+      </div>
+    </header>
+    {% include 'curve.svg' %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
     {% include 'footer.njk' %}
   </body>
 </html>

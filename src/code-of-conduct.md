@@ -1,9 +1,7 @@
 ---
-layout: layouts/layout.njk
+layout: layouts/code-of-conduct.njk
 title: Code of Conduct
 ---
-
-<section class="wrapper region flow prose">
 
 ## Our Goal
 
@@ -46,6 +44,5 @@ This community will not tolerate harassment of any kind. Examples of harassment 
 * Jokes that resemble the above, such as "hipster racism", still count as harassment even if meant satirically or ironically.
 
 ## When Something Happens
-Id reprehenderit cillum duis enim sit aliqua cupidatat aliqua. Amet ea cupidatat sint reprehenderit Lorem in cillum duis do minim velit enim dolor. Exercitation aute nostrud ea ea minim cillum pariatur anim ipsum irure ad ullamco. In aliquip minim est sunt sunt consequat commodo. Anim adipisicing dolore magna pariatur enim dolore duis culpa non non ad ad magna sunt. Nostrud laborum id officia excepteur ipsum ad dolor dolore. Cupidatat et magna labore dolore duis exercitation labore Lorem incididunt esse est reprehenderit.
 
-</section>
+Id reprehenderit cillum duis enim sit aliqua cupidatat aliqua. Amet ea cupidatat sint reprehenderit Lorem in cillum duis do minim velit enim dolor. Exercitation aute nostrud ea ea minim cillum pariatur anim ipsum irure ad ullamco. In aliquip minim est sunt sunt consequat commodo. Anim adipisicing dolore magna pariatur enim dolore duis culpa non non ad ad magna sunt. Nostrud laborum id officia excepteur ipsum ad dolor dolore. Cupidatat et magna labore dolore duis exercitation labore Lorem incididunt esse est reprehenderit.

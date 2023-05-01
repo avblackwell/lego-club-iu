@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <section class="wrapper region flow">
+        <h2 class="gradient-text">Upcoming events</h2>
+        <div class="grid" data-layout="50-50" data-rows="masonry">
+            {%- for event in collections.events | reverse  | limit(2) -%}
+                {% include 'event-list.njk' %}
+            {%- endfor -%}
+        </div>
+    </section>
+
+    <section class="dark-bg" style="--curve-color: var(--red-0)">
+        {% include 'curve.svg' %}
+        <div class="wrapper region flow prose">
+            <h2>How do I register?</h2>
+            <p>{{registration}}</p>
+        </div>
+    </section>
+    {% include 'curve.svg' %}
+
+    <section class="wrapper region flow">
+        <h2>About the organizers</h2>
+        <div class="grid" style="--grid-placement: auto-fit;">
+            {%- for item in collections.people -%}
+                {% include 'person.njk' %}
+            {%- endfor -%}
+        </div>
+    </section>
+{% endblock %}
