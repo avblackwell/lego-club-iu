@@ -1,74 +1,60 @@
 ---
-layout: layouts/with-header.njk
+layout: layouts/layout.njk
 title: LEGO Club @ IU
-descriptionIsHtml: true
-description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit. Commodo ullamco nostrud in amet consectetur culpa adipisicing anim consectetur reprehenderit officia.</p><a class='button' href='/'>Do something</a>"
+description: "Exercitation mollit eiusmod exercitation aliquip reprehenderit. Commodo ullamco nostrud in amet consectetur culpa adipisicing anim consectetur reprehenderit officia."
 ---
 
-{# <a
-  href="https://www.11ty.dev/news/logo-homage/"
-  class="elv-possum-anchor"
-  data-investors-avatar=""
->
-  <picture class="elv-possum-pic">
-    <!-- <source srcset="/img/possum-balloon-original.webp" type="image/webp"> -->
-    <img
-      src="/img/possum-balloon-original-sm.png"
-      class="elv-possum"
-      alt="The possum is Eleventy’s mascot"
-      loading="lazy"
-      width="200"
-      height="363"
-/>
-  </picture>
-</a> #}
-
-{# <section class="container flow">
-  {% set event = collections.eventPages | nextEvent %}
-  <h2 id="next-event">Our next meeting</h2>
-  {% if event %}
-    {% include 'featured-event.njk' %}
-  {% else %}
-    <p>Stay tuned for details!</p>
-  {% endif %}
-</section> #}
-<section>
-  <div class="container flow">
-    <h2>Upcoming events</h2>
-    {%- for item in collections.featuredEvents | reverse -%}
-      {% include 'featured-event.njk' %}
+<section class="wrapper region flow">
+  <h2 class="gradient-text">Upcoming events</h2>
+  <div class="grid" data-layout="50-50" data-rows="masonry">
+    {%- for item in collections.events | reverse  | limit(2) -%}
+      {% include 'event-list.njk' %}
     {%- endfor -%}
   </div>
 </section>
 
-{% include 'how-register.njk' %}
-
-<section class="container flow">
-  <h2>About the organizers</h2>
-  {%- for item in collections.people -%}
-    {% include 'person-no-photo.njk' %}
-  {%- endfor -%}
+<section class="wrapper region flow prose">
+  <blockquote>
+    <h2>How do I register?</h2>
+    <p>Culpa anim occaecat ad id nostrud id mollit elit minim qui cupidatat elit do dolor. Consectetur dolor nostrud consequat aliqua id in pariatur excepteur et non aliquip ipsum sunt quis. Nisi do reprehenderit duis sunt consequat occaecat ut. Dolore elit cillum adipisicing cupidatat exercitation. Tempor nulla incididunt ad exercitation sunt esse aute ut. Anim ad reprehenderit exercitation quis consequat ea ex occaecat do exercitation fugiat. Magna ex deserunt magna fugiat ea irure est aliquip amet.</p>
+  </blockquote>
 </section>
 
-<section class="">
-  <div class="container flow">
-    <h2>Sponsors</h2>
-    <p>
-      Non elit sit sit commodo consequat eu aliqua cillum.
-    </p>
-    <div class="sponsors">
-      <article class="sponsor">
-        <a href="/">
-          <img
-            src="https://picsum.photos/300/200"
-            alt="Placeholder"/>
-        </a>
-      </article>
-      <article class="sponsor">
-        <a href="/">
-          <img src="https://picsum.photos/300/200" alt="Placeholder"/>
-        </a>
-      </article>
-    </div>
+{# <section class="dark-bg">
+  <div class="wrapper region flow prose">
+    <blockquote>
+      <h2>How do I register?</h2>
+      <p>Culpa anim occaecat ad id nostrud id mollit elit minim qui cupidatat elit do dolor. Consectetur dolor nostrud consequat aliqua id in pariatur excepteur et non aliquip ipsum sunt quis. Nisi do reprehenderit duis sunt consequat occaecat ut. Dolore elit cillum adipisicing cupidatat exercitation. Tempor nulla incididunt ad exercitation sunt esse aute ut. Anim ad reprehenderit exercitation quis consequat ea ex occaecat do exercitation fugiat. Magna ex deserunt magna fugiat ea irure est aliquip amet.</p>
+    </blockquote>
+  </div>
+</section> #}
+
+<section class="wrapper region flow">
+  <h2>About the organizers</h2>
+  <div class="grid" style="--grid-placement: auto-fit;">
+    {%- for item in collections.people -%}
+      {% include 'person.njk' %}
+    {%- endfor -%}
   </div>
 </section>
+
+{# <section class="wrapper region flow">
+  <h2>Sponsors</h2>
+  <p>
+      Non elit sit sit commodo consequat eu aliqua cillum.
+    </p>
+  <div class="grid" style="--grid-placement: auto-fit;">
+    <article class="sponsor">
+      <a href="/">
+        <img
+            src="https://picsum.photos/300/200"
+            alt="Placeholder"/>
+      </a>
+    </article>
+    <article class="sponsor">
+      <a href="/">
+        <img src="https://picsum.photos/300/200" alt="Placeholder"/>
+      </a>
+    </article>
+  </div>
+</section> #}

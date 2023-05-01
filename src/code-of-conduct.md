@@ -1,10 +1,9 @@
 ---
-layout: layouts/with-header.njk
+layout: layouts/layout.njk
 title: Code of Conduct
-description: And community covenant for all participants
 ---
 
-<section class="container flow">
+<section class="wrapper region flow prose">
 
 ## Our Goal
 

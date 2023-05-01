@@ -1,12 +1,23 @@
 ---
 layout: layouts/layout.njk
-title: LEGO Club @ IU Events
-description: Occaecat minim ut ea nisi cillum cillum amet in ad.
+title: Events
+pagination:
+  data: collections.events
+  size: 2
+  alias: events
 ---
 
-<section class="container flow">
-  <h1>Events</h1>
-  {%- for item in collections.featuredEvents -%}
-    {% include 'event-short.njk' %}
-  {%- endfor -%}
+<section class="wrapper region flow">
+  <div class="grid" data-layout="50-50" data-rows="masonry">
+    {%- for item in collections.events | reverse -%}
+      {% include 'event-list.njk' %}
+    {%- endfor -%}
+  </div>
+
+  {% if pagination.href.previous %}
+    <a href="{{pagination.href.previous}}">Previous Page</a>
+  {% endif %}
+  {% if pagination.href.next %}
+    <a href="{{pagination.href.next}}">Next Page</a>
+  {% endif %}
 </section>

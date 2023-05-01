@@ -2,10 +2,18 @@
 layout: layouts/base.njk
 ---
 
-<header>
+<header class="dark-bg">
   {% include 'nav.njk' %}
+  <div class="wrapper region flow hero">
+    <h1>{{title}}</h1>
+    {% if descriptionIsHtml == true %}
+      <div class="lead">{{description | safe}}</div>
+    {% else %}
+      <p class="lead">{{description | safe}}</p>
+    {% endif %}
+  </div>
 </header>
 
-<main class="container flow">
+<main class="flow">
   {{ content | safe }}
 </main>

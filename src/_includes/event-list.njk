@@ -1,5 +1,5 @@
-<div class="featured-event">
+<div class="card flow" style="--flow-space: .5em">
   <time datetime="{{ item.data.date | htmlDateString }}">{{ item.data.date | readableDate("LLLL dd yyyy") }}</time>
   <h3>{{ item.data.title }}</h3>
-  <div>{{ item.data.overview | safe }}</div>
+  <p>{{ item.data.overview | safe }}</p>
 </div>

@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('people', collection => {
     return [...collection.getFilteredByGlob('./src/people/*.md')];
   });
-  eleventyConfig.addCollection('featuredEvents', collection => {
+  eleventyConfig.addCollection('events', collection => {
     return [...collection.getFilteredByGlob('./src/events/*.md')];
   });
 
@@ -22,6 +22,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+  });
+
+  eleventyConfig.addFilter("limit", function (arr, limit) {
+    return arr.slice(0, limit);
   });
 
   return {

@@ -1,0 +1,9 @@
+<article class="card flow" style="--flow-space: .5em">
+  <img class="headshot" src="{{item.data.headshotSrc}}" alt="">
+  <h3>{{item.data.name}}</h3>
+  {% if item.data.pronouns %}
+    <p>({{item.data.pronouns}})</p>
+  {% endif %}
+
+  <p>{{item.data.bio | safe }}</p>
+</article>
