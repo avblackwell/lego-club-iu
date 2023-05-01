@@ -634,3 +634,10 @@ footer svg {
   display: grid;
   place-content: center;
 }
+
+.curve {
+  display: block;
+  height: 3.5em;
+  width: 100%;
+  fill: var(--pink-10, var(--pink-10));
+}
