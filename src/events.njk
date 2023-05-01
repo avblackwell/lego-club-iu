@@ -3,21 +3,24 @@ layout: layouts/layout.njk
 title: Events
 pagination:
   data: collections.events
-  size: 2
+  size: 4
   alias: events
+  reverse: true
 ---
 
 <section class="wrapper region flow">
   <div class="grid" data-layout="50-50" data-rows="masonry">
-    {%- for item in collections.events | reverse -%}
+    {%- for event in events -%}
       {% include 'event-list.njk' %}
     {%- endfor -%}
   </div>
 
-  {% if pagination.href.previous %}
-    <a href="{{pagination.href.previous}}">Previous Page</a>
-  {% endif %}
-  {% if pagination.href.next %}
-    <a href="{{pagination.href.next}}">Next Page</a>
-  {% endif %}
+  <div class="flow pagination">
+    {% if pagination.href.previous %}
+      <a href="{{pagination.href.previous}}">Previous Page</a>
+    {% endif %}
+    {% if pagination.href.next %}
+      <a href="{{pagination.href.next}}">Next Page</a>
+    {% endif %}
+  </div>
 </section>

@@ -22,41 +22,7 @@
     0 1px 2px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
     0 2px 5px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
     0 4px 12px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
-    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
-
-
-
-  --white: #f8fafb;
-  --crimson: #990000;
-  --black: #182534;
-
-  --pink-0: #fff0f6;
-  --pink-1: #ffdeeb;
-  --pink-2: #fcc2d7;
-  --pink-3: #faa2c1;
-  --pink-4: #f783ac;
-  --pink-5: #f06595;
-  --pink-6: #e64980;
-  --pink-7: #d6336c;
-  --pink-8: #c2255c;
-  --pink-9: #a61e4d;
-  --pink-10: #8c1941;
-  --pink-11: #731536;
-  --pink-12: #59102a;
-
-  --cyan-0: #e3fafc;
-  --cyan-1: #c5f6fa;
-  --cyan-2: #99e9f2;
-  --cyan-3: #66d9e8;
-  --cyan-4: #3bc9db;
-  --cyan-5: #22b8cf;
-  --cyan-6: #15aabf;
-  --cyan-7: #1098ad;
-  --cyan-8: #0c8599;
-  --cyan-9: #0b7285;
-  --cyan-10: #095c6b;
-  --cyan-11: #074652;
-  --cyan-12: #053038;
+    0 12px 15px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));  
 
   --red-0: #fff5f5;
   --red-1: #ffe3e3;
@@ -191,8 +157,8 @@ select {
   project: https://cube.fyi/css.html
 */
 body {
-  color: var(--pink-10);
-  background: var(--pink-1);
+  color: var(--red-12);
+  background: var(--red-0);
   font-size: var(--size-step-1);
   font-family: var(--font-primary);
   line-height: 1.4;
@@ -281,18 +247,18 @@ main:focus {
 
 /* Base selection styles that invert whatever colours are rendered */
 ::selection {
-  background: var(--pink-10);
-  color: var(--pink-1);
+  background: var(--red-12);
+  color: var(--red-0);
 }
 
 .dark-bg {
-  background: var(--pink-10);
-  color: var(--pink-1);
+  background: var(--red-12);
+  color: var(--red-0);
 }
 
 .dark-bg ::selection {
-  background: var(--pink-1);
-  color: var(--pink-10);
+  background: var(--red-0);
+  color: var(--red-12);
 }
 
 /* 
@@ -343,7 +309,7 @@ Info about this implementation: https://piccalil.li/quick-tip/flow-utility/
 }
 
 img.headshot {
-  border: 5px solid var(--pink-10);
+  border: 5px solid var(--pink-12);
   border-radius: var(--radius-blob-5);
   height: auto;
   /* fallback */
@@ -379,21 +345,6 @@ img.headshot {
   margin-left: 0.5rem;
 }
 
-a {
-  color: var(--red-40);
-}
-
-.dark-bg a:not(.button) {
-  color: var(--red-30);
-}
-
-a:hover {
-  color: var(--red-30);
-}
-
-.dark-bg a:not(.button):hover {
-  color: var(--red-20);
-}
 
 .vertical-center {
   display: flex;
@@ -524,14 +475,14 @@ nav {
 }
 
 nav li a {
-  color: var(--pink-1);
+  color: var(--red-0);
   font-family: var(--font-accent);
   /* letter-spacing: 1px; */
   text-decoration: none;
 }
 
 nav li a:hover {
-  color: var(--pink-2);
+  color: var(--red-1);
 }
 
 /* header::after {
@@ -591,8 +542,8 @@ footer svg {
 }
 
 .card {
-  background: var(--pink-10);
-  color: var(--pink-1);
+  background: var(--red-1);
+  color: var(--red-12);
   padding: var(--space-m-l);
   border-radius: var(--border-radius);
   max-width: unset;
@@ -600,8 +551,8 @@ footer svg {
 }
 
 .card ::selection {
-  color: var(--pink-10);
-  background: var(--pink-1);
+  color: var(--red-1);
+  background: var(--red-12);
 }
 
 .prose {
@@ -614,7 +565,7 @@ footer svg {
 }
 
 .prose blockquote {
-  border-inline-start: 10px solid var(--pink-10);
+  border-inline-start: 10px solid var(--red-0);
   padding: var(--space-m-l);
   font-family: var(--font-serif);
   font-size: var(--size-step-2);
@@ -639,5 +590,20 @@ footer svg {
   display: block;
   height: 3.5em;
   width: 100%;
-  fill: var(--pink-10, var(--pink-10));
+  fill: var(--curve-color, var(--red-12));
+}
+
+footer {
+  background-color: var(--red-12);
+  color: var(--red-0);
+}
+
+header {
+  background-color: var(--red-12);
+  color: var(--red-0);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
 }
