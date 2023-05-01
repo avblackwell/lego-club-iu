@@ -35,7 +35,7 @@ description: "<p>Exercitation mollit eiusmod exercitation aliquip reprehenderit.
 <section>
   <div class="container flow">
     <h2>Upcoming events</h2>
-    {%- for item in collections.featuredEvents -%}
+    {%- for item in collections.featuredEvents | reverse -%}
       {% include 'featured-event.njk' %}
     {%- endfor -%}
   </div>

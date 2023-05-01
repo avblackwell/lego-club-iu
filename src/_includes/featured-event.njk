@@ -1,5 +1,5 @@
 <div class="featured-event">
-  <time datetime="{{item.page.date.toUTCString() | readableDate }}">{{item.page.date.toUTCString() | readableDate}}</time>
-  <h3>{{item.data.title}}</h3>
-  <div>{{item.data.overview | safe}}</div>
+  <time datetime="{{ item.data.date | htmlDateString }}">{{ item.data.date | readableDate("LLLL dd yyyy") }}</time>
+  <h3>{{ item.data.title }}</h3>
+  <div>{{ item.data.overview | safe }}</div>
 </div>
