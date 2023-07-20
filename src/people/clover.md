@@ -1,6 +1,6 @@
 ---
 name: Clover
-pronouns: test/test
-bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-headshotSrc: img/sarah.jpeg
+pronouns: He/They/She
+bio: Hello! I am the founder and current president of Lego Club at IU. Currently, I am a junior studying Studio Art and Entrepreneurship.
+headshotSrc: img/cloverheadshot.jpeg
 ---
