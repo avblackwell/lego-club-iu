@@ -1,7 +1,7 @@
 ---
 layout: layouts/home.njk
 title: LEGO Club @ IU
-description: "Exercitation mollit eiusmod exercitation aliquip reprehenderit. Commodo ullamco nostrud in amet consectetur culpa adipisicing anim consectetur reprehenderit officia."
-registration: Culpa anim occaecat ad id nostrud id mollit elit minim qui cupidatat elit do dolor. Consectetur dolor nostrud consequat aliqua id in pariatur excepteur et non aliquip ipsum sunt quis. Nisi do reprehenderit duis sunt consequat occaecat ut. Dolore elit cillum adipisicing cupidatat exercitation. Tempor nulla incididunt ad exercitation sunt esse aute ut. Anim ad reprehenderit exercitation quis consequat ea ex occaecat do exercitation fugiat. Magna ex deserunt magna fugiat ea irure est aliquip amet.
+description: "The Lego Club at IU meets every Monday from 5-7 at Media Services in Wells Library to do a themed LEGO build as a group! You don’t have to be a master builder, this is open to anyone who wants to socialize while getting to be creative! We also host special events, such as LEGO movie watches, and will potentially add competitions in the future!"
+registration: Anyone can join the Lego Club! First, check out our beINvolved page and join the roster there. For access to theme polls, direct updates, and various Lego conversation, join our group on GroupMe. If you do not have GroupMe, feel free to simply arrive at Media Services during a meet to build with us.
 ---
 
